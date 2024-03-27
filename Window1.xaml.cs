@@ -1,4 +1,5 @@
-﻿using System;
+﻿using p2.clasese;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -36,5 +37,21 @@ namespace p2
         {
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            var login=LoginBox.Text;
+            var password = PasswordBox.Text;    
+            var context = new AppDbContext();
+            var user = context.Users.SingleOrDefault(x => x.Login ==login && x.Password == password);
+            if (user is null)
+            {
+                MessageBox.Show("ТЫ НЕ ПРОЙДЕШЬ!!!!!");
+                return;
+            }
+            MessageBox.Show("Вы успешно зашли в акк");
+        }
+
+
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:p2"
         mc:Ignorable="d"
-        Title="avtoriz" Height="450" Width="800" Background="Azure" Closing="Window_Closing">
+        Title="registr" Height="450" Width="800" Background="Azure" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -33,15 +33,15 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="4"/>
-        <TextBox Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="4"/>
-        <TextBox Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="4"/>
-        <TextBox Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="4"/>
+        <TextBox Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="4" Name="LoginBox"/>
+        <TextBox Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="4" Name="EmailBox"/>
+        <TextBox Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="4" Name="PovtorPassBox"/>
+        <TextBox Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="4" Name="PasswordBox"/>
         <TextBlock Text="login" Grid.ColumnSpan="2" FontSize="30" Grid.Column="3" Grid.Row="1"/>
         <TextBlock Text="password" Grid.ColumnSpan="2" FontSize="30" Grid.Column="3" Grid.Row="5"/>
         <TextBlock Text="emeil" Grid.ColumnSpan="2" FontSize="30" Grid.Column="3" Grid.Row="3"/>
         <TextBlock Text="repeat password" Grid.ColumnSpan="3" FontSize="30" Grid.Column="3" Grid.Row="7"/>
-        <Button Content="ЗАРЕГАТЬСЯ" Grid.Column="4" Grid.Row="10" Name="reg"/>
-        <Button Content="УЖЕ ЗАРЕГАН?ВОЙТИ" Grid.Column="3" Grid.Row="9" Grid.ColumnSpan="3" Name="voiti" Click="voiti_Click"/>
+        <Button Content="ЗАРЕГАТЬСЯ" Grid.Column="4" Grid.Row="10" Name="reg" Click="reg_Click"/>
+        <Button Content="УЖЕ ЗАРЕГАН?ВОЙТИ" Grid.Column="3" Grid.Row="9" Grid.ColumnSpan="3" Name="voiti" Click="voiti_Click" Margin="0,0,0,36" Grid.RowSpan="2" />
     </Grid>
 </Window>
