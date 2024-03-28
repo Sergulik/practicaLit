@@ -5,12 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:p2"
         mc:Ignorable="d"
-        Title="registr" Height="450" Width="800" Background="Azure" Closing="Window_Closing">
+        Title="registr" Height="450" Width="800" Background="Bisque" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -27,21 +24,14 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="4" Name="LoginBox"/>
-        <TextBox Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="4" Name="EmailBox"/>
-        <TextBox Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="4" Name="PovtorPassBox"/>
-        <TextBox Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="4" Name="PasswordBox"/>
-        <TextBlock Text="login" Grid.ColumnSpan="2" FontSize="30" Grid.Column="3" Grid.Row="1"/>
-        <TextBlock Text="password" Grid.ColumnSpan="2" FontSize="30" Grid.Column="3" Grid.Row="5"/>
-        <TextBlock Text="emeil" Grid.ColumnSpan="2" FontSize="30" Grid.Column="3" Grid.Row="3"/>
-        <TextBlock Text="repeat password" Grid.ColumnSpan="3" FontSize="30" Grid.Column="3" Grid.Row="7"/>
-        <Button Content="ЗАРЕГАТЬСЯ" Grid.Column="4" Grid.Row="10" Name="reg" Click="reg_Click"/>
-        <Button Content="УЖЕ ЗАРЕГАН?ВОЙТИ" Grid.Column="3" Grid.Row="9" Grid.ColumnSpan="3" Name="voiti" Click="voiti_Click" Margin="0,0,0,36" Grid.RowSpan="2" />
+        <Button x:Name="ToRegBtn" Content="ты ещё не зареган?---------->зарегайся" Grid.Column="2" Grid.Row="4" Grid.ColumnSpan="3" Background="Bisque" Height="40" Click="ToRegBtn_Click"/>
+        <TextBox x:Name="LoginTB" Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="3"/>
+        <TextBox x:Name="PasswordTB" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="3"/>
+        <Button x:Name="AuthBtn" Grid.Column="3" Grid.Row="5" Background="Aquamarine" Content="войти" Click="AuthBtn_Click"/>
+        <Image Source="images/494933.png" Grid.Column="1" Grid.Row="3" Height="40"/>
+        <Image Source="images/6387915.png"  Grid.Column="1" Grid.Row="1" Height="40"/>
+        <Image Source="images/159604.png"  Grid.Column="5" Grid.Row="3" Height="40"/>
+
     </Grid>
 </Window>

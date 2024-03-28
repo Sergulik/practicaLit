@@ -1,0 +1,6 @@
+C:\Users\Student\Desktop\practicaLit\obj\Debug\net8.0-windows7.0\p2.csproj.AssemblyReference.cache
+C:\Users\Student\Desktop\practicaLit\obj\Debug\net8.0-windows7.0\MainWindow.g.cs
+C:\Users\Student\Desktop\practicaLit\obj\Debug\net8.0-windows7.0\Window1.g.cs
+C:\Users\Student\Desktop\practicaLit\obj\Debug\net8.0-windows7.0\App.g.cs
+C:\Users\Student\Desktop\practicaLit\obj\Debug\net8.0-windows7.0\p2_MarkupCompile.cache
+C:\Users\Student\Desktop\practicaLit\obj\Debug\net8.0-windows7.0\p2_MarkupCompile.lref

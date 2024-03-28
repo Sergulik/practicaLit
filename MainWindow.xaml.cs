@@ -12,47 +12,48 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace p2
-{
+{ 
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        public object PovtorPass { get; private set; }
-
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        private void ToRegBtn_Click(object sender, RoutedEventArgs e)
         {
-            Environment.Exit(0);    
+            Registration registration = new Registration();
+            registration.Show();
+            this.Hide();
         }
 
-        private void voiti_Click(object sender, RoutedEventArgs e)
+        private void AuthBtn_Click(object sender, RoutedEventArgs e)
+        {
+            var login = LoginTB.Text;
+            var password = PasswordTB.Text;
+            var context = new AppDbContext();
+            var user = context.Users.SingleOrDefault(x => x.Login == login && x.Password == password);
+            if (user is null)
+            {
+                MessageBox.Show("ТЫ НЕ ПРОЙДЕШЬ!!!!!Пароль или логин неправильный");
+                return;
+            }
+            MessageBox.Show("Вы успешно зашли в акк");
+        }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
             Environment.Exit(0);
         }
-
-        private void reg_Click(object sender, RoutedEventArgs e)
-        {
-            var login = LoginBox.Text;
-            var pass = PasswordBox.Text;
-            var ppass = PovtorPassBox.Text;
-            var context = new AppDbContext();
-            var user_exists = context.Users.FirstOrDefault(X => X.LoginBox == login);
-            if (user_exists is not null)
-            {
-                MessageBox.Show("Такой пользoватель уже в клубе топ челиков");
-                return;
-            }
-            var user = new User {  Login = login, Password = pass };
-            context.Users.Add(user);
-            context.SaveChanges();
-            MessageBox.Show("Welcome to the club, buddy");
-        }
-
     }
 
+
 }
+
+
+
+
+
